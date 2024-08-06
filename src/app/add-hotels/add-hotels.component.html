@@ -1,0 +1,42 @@
+<div class="container">
+  <form [formGroup]="hotelForm" (ngSubmit)="onSubmit()" class="row g-3">
+    <h2 class="col-md-8">Créer un nouveau hôtel</h2>
+    <button class="col-md-4"><i class="bi bi-x-circle"></i></button>
+    <div class="col-md-6">
+      <label for="hotelName" class="form-label">Nom de l'Hotel</label>
+      <input type="text" formControlName="hotelName" class="form-control input" id="hotelName" required>
+    </div>
+    <div class="col-md-6">
+      <label for="address" class="form-label">Adresse</label>
+      <input type="text" formControlName="addresse" class="form-control input" id="address" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control input" id="email" required>
+    </div>
+    <div class="col-md-6">
+      <label for="telephone" class="form-label">Numéro de Téléphone</label>
+      <input type="tel" formControlName="telephone" class="form-control input" id="telephone" required>
+    </div>
+    <div class="col-md-6">
+      <label for="prix" class="form-label">Prix Unitaire</label>
+      <input type="number" formControlName="prix" class="form-control input" id="prix" required>
+    </div>
+    <div class="col-md-6">
+      <label for="currency" class="form-label">Devise</label>
+      <select formControlName="currency" class="form-control input" id="currency">
+        <option value="XOF">XOF</option>
+        <option value="fcf">FCF</option>
+        <option value="£">£</option>
+        <option value="$">$</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <label for="image" class="form-label">Image</label>
+      <input type="file" formControlName="image" class="form-control inputFile" id="image">
+    </div>
+    <div class="col-12 text-end">
+      <button type="submit" class="btn btn-secondary">Enregistrer</button>
+    </div>
+  </form>
+</div>
